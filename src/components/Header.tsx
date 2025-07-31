@@ -19,7 +19,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 z-50 flex items-center justify-between px-4 py-2 md:px-8 w-full border-b border-gray-300 bg-white/60 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 z-50 flex items-center justify-between px-4 py-2 md:px-8 w-full border-b border-gray-300 bg-white">
       <div className="flex items-center">
         <img src={logo} alt="logo" className="size-10" />
         <Link

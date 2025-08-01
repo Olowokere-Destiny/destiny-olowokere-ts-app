@@ -4,7 +4,7 @@ const ProductsSkeleton = () => {
       {Array.from({ length: 8 }).map((_, index) => (
         <div
           key={index}
-          className="animate-pulse bg-gray-100 h-16 rounded-md"
+          className="animate-pulse bg-[var(--skeleton-bg)] h-18 rounded-md"
         />
       ))}
     </div>

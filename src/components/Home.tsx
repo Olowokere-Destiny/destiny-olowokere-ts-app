@@ -1,20 +1,28 @@
+import { useContext } from "react";
 import useFetchData from "../lib/hooks/useFetchData";
 import Error from "./Error";
 import ProductCard from "./ProductCard";
 import ProductsSkeleton from "./ProductsSkeleton";
+import { ThemeContext } from "./ThemeContext";
 
 const Home = () => {
   const { data, handleReload, loading, isError } = useFetchData();
+  const { theme } = useContext(ThemeContext)!;
+  const productContainerStyling = `flex flex-col gap-4 ${theme === "forest" && "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"}`;
   if (isError) return <Error />;
   return (
-    // component height to exclude header
+    // set height to exclude header height
     <div className="w-full min-h-[calc(100vh-58px)]">
       <div className="space-y-4">
-        <h1 className="text-3xl font-medium text-black/70">Products</h1>
-        <p className="text-black/70">This is a list of all products</p>
+        <h1 className="text-(length:--title-size) font-(--title-weight) text-[var(--title-color)]">
+          Products
+        </h1>
+        <p className="text-[var(--text)] text-(length:--subtitle-size) font-(--subtitle-weight)">
+          This is a list of all products
+        </p>
         <button
           disabled={loading}
-          className="text-sm block cursor-pointer bg-white border border-slate-300 rounded-md px-2 py-1 hover:bg-slate-100"
+          className="block cursor-pointer bg-[var(--btn-bg)] text-[var(--btn-text-color)] border border-[var(--btn-border)] rounded-md px-2 py-1 text-(length:--subtitle-size)"
           onClick={handleReload}
         >
           Reload
@@ -24,7 +32,7 @@ const Home = () => {
       {loading ? (
         <ProductsSkeleton />
       ) : (
-        <ul className="mt-8 space-y-4">
+        <ul className={`mt-8 ${productContainerStyling} gap-4`}>
           {data?.map(
             (product: {
               id: number;

@@ -93,6 +93,7 @@
   --title-weight: 400;
   --light-text: var(--color-forest-200);
   --list-border-color: transparent;
+  --skeleton-bg: var(--color-forest-900);
   --subtitle-size: 1.2rem;
   --dropdown-text-color: var(--color-forest-600);
   --dropdown-text-hover: var(--color-forest-100);

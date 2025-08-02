@@ -1,7 +1,7 @@
 const Error = () => {
   return (
-    <div className="h-[80vh] lg:h-[70vh] flex justify-center items-center">
-      <p>An error occured</p>
+    <div className="h-[100vh] flex justify-center items-center">
+      <p className="text-[var(--text)]">An error occured</p>
     </div>
   );
 };

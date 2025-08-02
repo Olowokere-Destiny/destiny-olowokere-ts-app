@@ -8,13 +8,14 @@ import { ThemeContext } from "../ThemeContext";
 const Home = () => {
   const { data, handleReload, loading, isError } = useFetchData();
   const { theme } = useContext(ThemeContext)!;
-  const productContainerStyling = `flex flex-col gap-4 ${theme === "forest" && "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"}`;
+  const isforest = theme === "forest";
+  const productContainerStyling = `flex flex-col gap-4 ${isforest && "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"}`;
   if (isError) return <Error />;
   return (
     // set height to exclude header height
     <div className="w-full min-h-[calc(100vh-58px)]">
-      <div className="space-y-4">
-        <h1 className="text-(length:--title-size) font-(--title-weight) text-[var(--title-color)]">
+      <div className={`space-y-4 ${isforest && "w-max mx-auto"} mt-6 md:mt-0`}>
+        <h1 className={`text-(length:--title-size) font-(--title-weight) text-[var(--title-color)] ${isforest && "text-center"}`}>
           Products
         </h1>
         <p className="text-[var(--text)] text-(length:--subtitle-size) font-(--subtitle-weight)">
@@ -22,7 +23,7 @@ const Home = () => {
         </p>
         <button
           disabled={loading}
-          className="btn"
+          className={`btn ${isforest && "mx-auto"}`}
           onClick={handleReload}
         >
           Reload

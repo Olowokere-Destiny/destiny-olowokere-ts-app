@@ -63,19 +63,21 @@ const Header = () => {
         </span>
       </Link>
 
-      <div className="flex  gap-x-2 md:gap-x-4 items-center">
-        {pagesLinks.map((link) => (
-          <NavLink
-            className={({ isActive }) => {
-              return applyLinkClasses(isActive);
-            }}
-            key={link.route}
-            to={link.route}
-          >
-            {link.label}
-          </NavLink>
-        ))}
-      </div>
+      {theme !== "dark" && (
+        <div className="flex gap-x-2 md:gap-x-4 items-center">
+          {pagesLinks.map((link) => (
+            <NavLink
+              className={({ isActive }) => {
+                return applyLinkClasses(isActive);
+              }}
+              key={link.route}
+              to={link.route}
+            >
+              {link.label}
+            </NavLink>
+          ))}
+        </div>
+      )}
 
       <div ref={dropdownRef} className="relative">
         <div

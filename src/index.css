@@ -113,5 +113,5 @@
 }
 
 .btn {
-  @apply block cursor-pointer bg-[var(--btn-bg)] text-[var(--btn-text-color)] border border-[var(--btn-border)] rounded-md px-2 py-1 text-(length:--subtitle-size)
+  @apply block cursor-pointer bg-[var(--btn-bg)] text-[var(--btn-text-color)] border border-[var(--btn-border)] rounded-md px-2 py-1 text-(length:--subtitle-size) font-bold
 }

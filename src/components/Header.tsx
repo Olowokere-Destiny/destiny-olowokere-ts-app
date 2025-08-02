@@ -55,8 +55,8 @@ const Header = () => {
   }, [theme]);
 
   return (
-    <header className="fixed top-0 left-0 z-50 flex items-center justify-between px-4 py-2 md:px-8 w-full border-b border-[var(--list-border-color)] bg-[var(--header-bg)] backdrop-blur-[var(--blur)] max-h-[58px]">
-      <Link to="/" className="flex items-center">
+    <header className="fixed top-0 left-0 z-50 flex items-center justify-between px-4 py-2 md:px-8 w-full border-b border-[var(--list-border-color)] bg-[var(--header-bg)] max-h-[58px]">
+      <Link to="/" className="flex items-center shrink-0">
         <img src={logo} alt="logo" className="size-10 shrink-0" />
         <span className="hidden md:block text-xl font-bold text-[var(--logo-colour)]">
           FlowCart

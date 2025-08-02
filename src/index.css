@@ -52,11 +52,12 @@
   --bg: black;
   --font-display: var(--font-serif);
   --text: white;
-  --header-bg: rgba(0, 0, 0, 0.8);
-  --blur: 2px;
+  --header-bg: black;
+  --sidebar-bg: rgba(0, 0, 0, 0.9);
+  --blur: 8px;
   --btn-bg: white;
   --logo-colour: white;
-  --main-bg: rgba(0, 0, 0, 0.9);
+  --main-bg: rgba(0, 0, 0, 0.95);
   --title-color: white;
   --title-size: 2rem;
   --title-weight: 600;

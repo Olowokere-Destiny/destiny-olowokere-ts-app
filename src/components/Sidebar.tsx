@@ -11,7 +11,7 @@ const Sidebar = ({sidebarOpen}:Props) => {
   if (theme !== "dark" || !sidebarOpen) return null;
   return (
     // using aside tag for better accessibility
-    <aside className="fixed w-[250px] lg:w-[300px] min-h-[calc(100vh-58px)] bg-[var(--header-bg)] backdrop-blur-[var(--blur)]">
+    <aside className="fixed w-[250px] lg:w-[300px] min-h-[calc(100vh-58px)] bg-[var(--sidebar-bg)] backdrop-blur-[var(--blur)]">
       <div className="mt-24 flex flex-col gap-y-8 px-4 md:px-8">
         {pagesLinks.map((link) => (
           <NavLink

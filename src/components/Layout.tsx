@@ -23,8 +23,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
     }
   }, [theme])
 
-  console.log(sidebarOpen)
-
   return (
     <div
       className={`theme-${theme} bg-[var(--main-bg)] font-(family-name:--font-display)`}

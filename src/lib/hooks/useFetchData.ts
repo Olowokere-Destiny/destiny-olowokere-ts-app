@@ -17,7 +17,8 @@ const useFetchData = () => {
       setIsError(false);
 
       try {
-        const res = await fetch("https://fakestoreapi.com/products");
+        const url = import.meta.env.VITE_PRODUCTS_URL; // stored in .env for security. Check README for url.
+        const res = await fetch(url);
         const result = await res.json();
         setData(result);
       } catch (error) {

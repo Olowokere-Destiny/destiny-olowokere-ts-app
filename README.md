@@ -20,9 +20,9 @@ FlowCart is a simple React app built with Vite and Tailwind CSS v4.1. It support
 3. Install dependencies  
    `npm install`
 
-4. Start the dev server  
+4. Create a .env in the root folder and paste this in `VITE_PRODUCTS_URL=https://fakestoreapi.com/products`
+
+5. Start the dev server  
    `npm run dev`
 
-5. Visit [http://localhost:5173](http://localhost:5173)
-
-NOTE: Products url: (https://fakestoreapi.com/products)
+6. Visit [http://localhost:5173](http://localhost:5173)

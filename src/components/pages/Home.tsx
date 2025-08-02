@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import useFetchData from "../lib/hooks/useFetchData";
-import Error from "./Error";
-import ProductCard from "./ProductCard";
-import ProductsSkeleton from "./ProductsSkeleton";
-import { ThemeContext } from "./ThemeContext";
+import useFetchData from "../../lib/hooks/useFetchData";
+import Error from "../Error";
+import ProductCard from "../ProductCard";
+import ProductsSkeleton from "../ProductsSkeleton";
+import { ThemeContext } from "../ThemeContext";
 
 const Home = () => {
   const { data, handleReload, loading, isError } = useFetchData();
@@ -22,7 +22,7 @@ const Home = () => {
         </p>
         <button
           disabled={loading}
-          className="block cursor-pointer bg-[var(--btn-bg)] text-[var(--btn-text-color)] border border-[var(--btn-border)] rounded-md px-2 py-1 text-(length:--subtitle-size)"
+          className="btn"
           onClick={handleReload}
         >
           Reload

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-serif: serif;
-  --font-playful: 'Pacifico', cursive;
+  --font-playful: "Pacifico", cursive;
   --title-size-dark: 3rem;
   --title-weight-dark: 700;
   --title-size-light: 1.875rem;
@@ -40,10 +40,12 @@
   --subtitle-weight: var(--subtitle-weight-light);
   --skeleton-bg: #f3f4f6;
   --dropdown-text-color: rgba(0, 0, 0, 0.8);
-  --dropdown-text-hover: #f1f5f9 ;
+  --dropdown-text-hover: #f1f5f9;
   --card-display: flex;
   --btn-border: #cad5e2;
   --btn-bg: white;
+  --link-active-bg: #f1f5f9;
+  --textarea-border-color: #cad5e2;
 }
 
 .theme-dark {
@@ -60,6 +62,7 @@
   --title-weight: 600;
   --light-text: rgba(255, 255, 255, 0.8);
   --list-border-color: transparent;
+  --textarea-border-color: #cad5e2;
   --title-size: var(--title-size-dark);
   --title-weight: var(--title-weight-dark);
   --subtitle-size: var(--subtitle-size-dark);
@@ -72,6 +75,7 @@
   --listing-text-size: 1.1rem;
   --dropdown-text-color: rgba(0, 0, 0, 0.8);
   --dropdown-text-hover: rgba(0, 0, 0, 0.8);
+  --link-active-bg: #252627;
 }
 
 .theme-forest {
@@ -91,16 +95,23 @@
   --title-color: white;
   --title-size: 2.5rem;
   --title-weight: 400;
+  --textarea-border-color: var(--color-forest-200);
   --light-text: var(--color-forest-200);
   --list-border-color: transparent;
   --skeleton-bg: var(--color-forest-900);
   --subtitle-size: 1.2rem;
   --dropdown-text-color: var(--color-forest-600);
   --dropdown-text-hover: var(--color-forest-100);
+  --link-underline: solid;
 }
 
 * {
-  transition-property: color, background-color, border-color, font-size, font-weight;
+  transition-property: color, background-color, border-color, font-size,
+    font-weight;
   transition-timing-function: ease-in-out;
   transition-duration: 300ms;
+}
+
+.btn {
+  @apply block cursor-pointer bg-[var(--btn-bg)] text-[var(--btn-text-color)] border border-[var(--btn-border)] rounded-md px-2 py-1 text-(length:--subtitle-size)
 }
